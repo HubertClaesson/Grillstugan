@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display&display=swap');
+
+
+/* Beskrivning
+1. Rootsettings
+2. Body, html settings
+3. Navbar
+4.Hero section (image) + (content)
+5.info-section (Lunch)/(Middag) + (image)
+6.Form (boka bord)
+7.Footer
+*/
+
+/*1. Root settings*/
+*{
+    font-family:inter; 
+    box-sizing:border-box;
+
+    --one:#F5DEB3;
+    --two:#B61A1A;
+}
+/* Koden är validerad*/
+
+/*2. Body html settings*/
+
+body, html {
+    display: block;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--one);
+}
+
+/* koden är validerad*/
+
+/*3. Navbar*/
+
+.navbar-links{
+    height: 4rem;
+    background-color: black;
+}
+
+.navbar-links ul{
+    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.2rem;
+}
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links a{
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    font-weight:300;
+}
+
+.navbar-links a:hover{
+    color: rgb(182, 26, 26);
+}
+
+/*För att centrera nav bar i mobilt läge*/
+@media only screen and (max-width:376px) {
+    .navbar-links ul{
+        margin-left:8vw;
+    }
+}
+
+/* Koden är validerad*/
+
+/*4. Hero section, (image) + (content) */
+
+.hero-section{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    width: 100vw;
+    height: 50vh;
+    background-image: url(img/friends-g350673a3e_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner-content{
+    text-align: center;
+    color: white;
+}
+#rubrik1{
+    background-color: rgba(0, 0, 0, 0.354);
+    font-size: 36px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius:3px;
+}
+
+#rubrik2{
+    width: 188px;
+    height: 41px;
+    padding-top: 5px;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#btn-link{
+    background-color: rgb(182, 26, 26, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 300;
+    width: 135px;
+    height: 49px;
+    text-decoration: none;
+}
+#btn-link:hover{
+    color: rgb(0, 0, 0)
+}
+
+
+h2{
+    background-color: white;
+    padding: 0.2rem;
+    max-width: 20%;
+    min-width: 90%;
+}
+
+.pris{
+    font-weight:600;
+}
+
+/* koden är validerad */
+
+/*För att anpassa bilden efter olika skärmar används media queries */
+
+@media only screen and (max-width: 550px) {
+    .hero-section{
+        height: 60vh;
+    }
+}
+
+/* 5. info-section */
+
+.grid-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 2fr 2fr;
+   grid-template-areas:
+   "text1 bild1 bild3"
+   "text2 bild2 bild4";
+   gap: 1rem;
+   padding: 1rem;
+   }
+
+   #text1{
+    grid-area: text1;
+    border: black dotted;
+    padding-left: 0.8rem;
+   }
+   #bild1{
+    grid-area: bild1;
+    background-image:  url(img/smoke-g1456ad3d8_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    border: solid black 0.1rem;
+   }
+   #text2{
+    grid-area: text2;
+    border: black dotted;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+   }
+   #bild2{
+    grid-area: bild2;
+    background-image: url(img/giblets-gbe0de7b09_1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    border: solid black 0.1rem;
+   }
+   #bild3{
+    grid-area: bild3;
+    background-image: url(img/grilled-g69a292d1a_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    border: solid black 0.1rem;
+   }
+   #bild4{
+    grid-area: bild4;
+    background-image: url(img/meat-gb5fa2bd18_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    border: solid black 0.1rem;
+   }
+
+/*För att göra gridd responsivs*/
+   @media only screen and (max-width:550px) {
+    .grid-container{
+        grid-template-columns:1fr;
+        grid-template-rows:4fr;
+        grid-template-areas:
+        "text1"
+        "bild1"
+        "text2"
+        "bild2"
+        "bild3"
+        "bild4";
+    }
+    #bild1{
+        height: 30vh;
+    }
+    #bild2{
+        height: 30vh;
+    }
+    #bild3{
+        height: 30vh;
+    }
+    #bild4{
+        height: 30vh;
+    }
+
+   }
+/* Koden är validerad*/
+
+/*6. Form (boka bord)*/
+
+.form-grid{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas:"rubrik"
+    "form";
+    padding-top: 3vh;
+    margin: 0 1rem;
+}
+
+#ban1{
+    grid-area:rubrik;
+    background-color: #B61A1A;
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 0.8rem;
+    border: solid black;
+}
+#formb{
+    grid-area: form;
+    background-color: aliceblue;
+    border: solid black;
+    margin: 0 1rem;
+    margin: 3vh 0;
+    text-align: center;
+    display: block;
+}
+
+input[type=submit] {
+    font-weight: 700;
+    background-color: whitesmoke;
+}
+
+label{
+    font-weight: 600;
+}
+
+.form li{
+    list-style: none;
+    padding: 0.5rem;
+}
+
+/* koden är validerd*/
+
+/*7. footer*/
+
+footer{
+    background-color: black;
+    height: 4rem;
+    width: 100%;
+}
+
+footer ul{
+    float:left;
+    margin-top: 1.4rem;
+}
+footer ul li{
+    color: white;
+    list-style: none;
+    display: inline-block;
+    font-weight: 350;
+
+}
+footer ul li a{
+    text-decoration: none;
+    margin-right: 1rem;
+    color: white;
+    font-weight: 700;
+}
+footer ul li a:hover{
+    color: #B61A1A;
+}
+
+/* All kod är validerad*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
