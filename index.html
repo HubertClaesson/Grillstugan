@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resaurang koreansk bbq" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Grillstugan</title>
+  </head>
+  <body>
+    <nav class="navbar-links">
+      <ul id="hem">
+        <li><a href="#meny">Meny</a></li>
+        <li><a href="#footer">Boka Bord</a></li>
+        <li><a href="#footer">Kontakt</a></li>
+      </ul>
+    </nav>
+    <section class="hero-section">
+      <div class="banner-content">
+        <h1 id="rubrik1">Grillstugan</h1>
+        <h1 id="rubrik2">Koreansk BBQ</h1>
+        <a id="btn-link" href="#footer">Boka Bord</a>
+      </div>
+    </section>
+    <!--Koden är validerad-->
+    <!--Grid-container-->
+    <div class="grid-container">
+      <div id="text1">
+        <h2>Lunch</h2>
+        <p id="meny">
+          Lunchbuffen är öppen mellan kl 11:00 - 14:00. Måndag till Fredag.
+        </p>
+        <p class="pris">Pris: 155 kr.</p>
+      </div>
+      <div id="bild1"></div>
+      <div id="bild3"></div>
+      <div id="text2">
+        <h2>Middag</h2>
+        <p>
+          Från kl 17:00 - 22:00 har vi Koreansk BBQ där ni själva får laga mat
+          på egen grill, välj mellan olika typer av kött och tillbehör. Vi tar
+          emot sällskap upp till 10 personer.
+        </p>
+        <p class="pris">Pris: 180 kr för vuxna och 110 kr för barn.</p>
+      </div>
+      <div id="bild2"></div>
+      <div id="bild4"></div>
+    </div>
+    <!-- Koden är validerad-->
+    <!-- Här börjar skylt för formulär-->
+    <div class="form-grid">
+      <div id="ban1">
+        <h1>Boka bord</h1>
+        <h3>Fredag Lördag & Söndag</h3>
+      </div>
+      <!--Formulära för att boka bord-->
+      <div id="formb">
+        <div class="titel">
+          <h1>Boknings formulär</h1>
+        </div>
+        <section class="form">
+          <form action="#" method="post">
+            <ul>
+              <!--Här börjar textbox för förnamn-->
+              <li>
+                <label for="fname"
+                  >Förnamn
+                  <input
+                    name="firstname"
+                    id="fname"
+                    placeholder="Förnamn"
+                    type="text"
+                  />
+                </label>
+              </li>
+              <!--här börjar textbox för efternamn-->
+              <li>
+                <label for="efname"
+                  >Efternamn
+                  <input
+                    name="lastname"
+                    id="efname"
+                    placeholder="Efternamn"
+                    type="text"
+                  />
+                </label>
+              </li>
+              <!--Här börjar radioknappar-->
+              <li>
+                <label>
+                  Dag
+                  <input name="dag" type="radio" value="fredag" />
+                  Fredag
+                </label>
+                <label>
+                  <input name="dag" type="radio" value="lördag" />
+                  Lördag
+                </label>
+                <label>
+                  <input name="dag" type="radio" value="söndag" />
+                  Söndag
+                </label>
+              </li>
+              <!-- Här börjar rullgardinen för tider-->
+              <li>
+                <label for="tid">Klockan</label>
+                <select id="tid" name="tid">
+                  <option selected value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                  <option value="22:00">22:00</option>
+                </select>
+              </li>
+              <li>
+                <label for="personer">Personer</label>
+                <select id="personer" name="personer">
+                  <option value="1">1</option>
+                  <option selected value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </li>
+            </ul>
+            <!--Här börjar knappen-->
+            <ul>
+              <li><input type="submit" value="Boka" /></li>
+            </ul>
+          </form>
+        </section>
+      </div>
+    </div>
+    <!--Koden är validerad-->
+    <!--Här börjar footern-->
+    <footer id="footer">
+      <ul>
+        <li><a href="#hem">UPP</a></li>
+        <li>Telefon: 074-44487</li>
+      </ul>
+    </footer>
+    <!--koden är validerad-->
+  </body>
+</html>
+<!-- All kod är validerad-->
